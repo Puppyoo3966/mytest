@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <base th:href="@{/}">
+</head>
+<body>
+<h1>显示所有显示</h1>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>gender</td>
+        <td>salary</td>
+        <td>joinDate</td>
+        <td>deptId</td>
+    </tr>
+    <tr th:each="emp:${employeeList}">
+        <td th:text="${emp.id}"></td>
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.gender}"></td>
+        <td th:text="${emp.salary}"></td>
+        <td th:text="${emp.joinDate}"></td>
+        <td th:text="${emp.deptId}"></td>
+    </tr>
+</table>
+</body>
+</html>
